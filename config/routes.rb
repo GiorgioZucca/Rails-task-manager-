@@ -1,3 +1,22 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+  # List all tasks
+  get 'tasks', to: 'tasks#index'
+
+  # Create forms
+  get 'tasks/new', to: 'tasks#new'
+
+  # List one task
+  get 'tasks/:id', to: 'tasks#show', as: 'task'
+
+  # Create Tasks
+  post 'tasks', to: 'tasks#create'
+
+  #edit form
+  get 'tasks/:id/edit', to: 'tasks#edit'
+
+  #update the task
+  patch 'tasks/:id', to: 'tasks#update'
+
+  #delete a task
+  delete 'tasks/:id', to: 'tasks#destroy'
 end

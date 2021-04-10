@@ -1,0 +1,8 @@
+<h1>Info of <%= @task.title %></h1>
+
+<p>Title: <%= @task.title %></p>
+<p>Description: <%= @task.details %></p>
+<p>Completed: <%= @task.completed %></p>
+
+
+<%= link_to 'Remove this Taks', task_path, method: :delete %>
