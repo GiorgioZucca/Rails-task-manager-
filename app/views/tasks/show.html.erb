@@ -1,8 +1,15 @@
+<div class="white-box">
+
 <h1>Info of <%= @task.title %></h1>
 
 <p>Title: <%= @task.title %></p>
 <p>Description: <%= @task.details %></p>
 <p>Completed: <%= @task.completed %></p>
 
+<p><%= link_to 'Edit', edit_task_path(@task) %></p>
 
-<%= link_to 'Remove this Taks', task_path, method: :delete %>
+<p><%= link_to 'Go back to dashboard', tasks_path %></p>
+
+<p><%= link_to 'Remove this Tasks', task_path, method: :delete %></p>
+
+</div>

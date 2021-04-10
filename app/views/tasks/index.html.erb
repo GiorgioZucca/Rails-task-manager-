@@ -1,7 +1,14 @@
-<h1>My tasks</h1>
+<div class="white-box">
+  <h1 class="display-4">My tasks</h1>
 
-<ul>
-  <% @tasks.each do |task| %>
-    <li><%= task.title %></li>
-  <% end %>
-</ul>
+
+  <ul>
+    <% @tasks.each do |task| %>
+      <li class="list-group-item list-group-item-action flex-column align-items-start"><%= link_to task.title, task_path(task) %></li>
+    <% end %>
+  </ul>
+
+  <%= link_to 'New task', tasks_new_path %>
+</div>
+
+<span></span>
